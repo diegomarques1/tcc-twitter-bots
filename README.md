@@ -37,19 +37,19 @@ O diretório /src_v2 possui o código-fonte da versão 2 aplicação Flask do pr
 No entanto, atualmente, para essa aplicação funcionar, é necessário ter acesso a algum plano na API do Twitter acima do gratuito. <strong>Portanto, recomendamos a utilização da versão 1 para testes, a não ser que você pague algum plano mensal da API do Twitter</strong>.
 
 ### <strong>Observações fundamentais</strong>
-* Como a versão 2 da aplicação utiliza diretamente a API do Twitter, para ela funcionar na extração e previsão dos dados de uma conta, você precisa ter um [bearer token](https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens) da API do Twitter de um plano acima do gratuito. Caso você o possua, basta criar um arquivo .env dentro do diretório /src_v2 e nele colocar a variável ```MY_BEARER_TOKEN``` seguido do token em si, entre aspas;
+* Como a versão 2 da aplicação utiliza diretamente a API do Twitter, para ela funcionar na extração e previsão dos dados de uma conta, você precisa ter um [bearer token](https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens) da API do Twitter de um plano acima do gratuito. Caso você o possua, basta criar um arquivo .env dentro do diretório /src_v2 e nele colocar a variável `MY_BEARER_TOKEN` seguido do token em si, entre aspas;
 * Também por utilizar a API do Twitter, que em 2023 está em constante modificação, não há maneira de garantir que a versão atual do projeto irá funcionar corretamente para a extração de dados, no caso da versão 2.
 
 ## Executando localmente
 A aplicação foi construída com base nas seguintes dependências:
-* ```Python 3.10.10```
-* ```pip 23.2.1```
-* ```Flask 2.3.3```
+* `Python 3.10.10`
+* `pip 23.2.1`
+* `Flask 2.3.3`
 
 Também foram utilizadas as seguintes bibliotecas: <strong>*os, dotenv, numpy, pandas, tweepy e warnings*</strong>. Talvez seja necessário adicioná-las separadamente por meio do comando:
 
-```pip install nome-do-pacote```
+`pip install nome-do-pacote`
 
 Feito isso, basta estar no diretório raiz da aplicação e executar o seguinte comando:
 
-```python bots.py```
+`python bots.py`
