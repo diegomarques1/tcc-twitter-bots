@@ -40,7 +40,7 @@ No entanto, atualmente, para essa aplicação funcionar, é necessário ter aces
 * Como a versão 2 da aplicação utiliza diretamente a API do Twitter, para ela funcionar na extração e previsão dos dados de uma conta, você precisa ter um [bearer token](https://developer.twitter.com/en/docs/authentication/oauth-2-0/bearer-tokens) da API do Twitter de um plano acima do gratuito. Caso você o possua, basta criar um arquivo .env dentro do diretório /src_v2 e nele colocar a variável ```MY_BEARER_TOKEN``` seguido do token em si, entre aspas;
 * Também por utilizar a API do Twitter, que em 2023 está em constante modificação, não há maneira de garantir que a versão atual do projeto irá funcionar corretamente para a extração de dados, no caso da versão 2.
 
-### Executando localmente
+## Executando localmente
 A aplicação foi construída com base nas seguintes dependências:
 * ```Python 3.10.10```
 * ```pip 23.2.1```
@@ -53,4 +53,3 @@ Também foram utilizadas as seguintes bibliotecas: <strong>*os, dotenv, numpy, p
 Feito isso, basta estar no diretório raiz da aplicação e executar o seguinte comando:
 
 ```python bots.py```
-
