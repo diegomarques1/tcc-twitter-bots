@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="description" content="Aplicação com o objetivo de prever se uma conta é um bot ou não no Twitter/X">
+  <title>Identificação de bot no Twitter</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+</head>
+<body>
+  <header>
+      <div id="head">
+        <a href="/"><h1 class="logo">Identificação de bot no Twitter - Resultado</h1></a>
+        <img src="../static/img/old-logo-twitter.png" alt="Logo antiga do Twitter"/>
+      </div>
+  </header>
+  <h2>A conta é um provável bot? <strong>{{resultado.classe}}</strong></h2>
+  <h3>Probabilidade da conta @{{resultado.username}} ser um bot: {{resultado.res_proba}}%</h3>
+  <div class="results">
+    <table>
+      <tr>
+        <th>Quantidade de seguidores</th>
+        <th>Quantidade de contas que segue</th>
+        <th>Quantidade de likes dados</th>
+        <th>Quantidade de postagens</th>
+      </tr>
+      <tr>
+        <td>{{resultado.follower_count}}</td>
+        <td>{{resultado.followings_count}}</td>
+        <td>{{resultado.favourites_count}}</td>
+        <td>{{resultado.statuses_count}}</td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp</td>
+      </tr>
+      <tr>
+        <th>Proporção de seguidores e de contas seguidas</th>
+        <th>Média de RTs nos últimos 5 tweets</th>
+      </tr>
+      <tr>
+        <td>{{resultado.followers_followings_ratio}}</td>
+        <td>{{resultado.rts_mean}}</td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp</td>
+      </tr>
+      <tr>
+        <th>Média de likes nos últimos 5 tweets</th>
+        <th>Proporção de RTs por likes nos últimos 5 tweets</th>
+      </tr>
+      <tr>
+        <td>{{resultado.favs_mean}}</td>
+        <td>{{resultado.rts_favs_ratio}}</td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp</td>
+      </tr>
+      <tr>
+        <th>Verificado</th>
+        <th>URL no perfil</th>
+      </tr>
+      <tr>
+        <td>{{resultado.is_verified}}</td>
+        <td>{{resultado.has_url}}</td>
+      </tr>
+      <tr>
+        <td colspan="2">&nbsp</td>
+      </tr>
+      <tr>
+        <th>Postou algo idêntico mais de uma vez</th>
+        <th>Postou algo idêntico ao post de outra pessoa</th>
+      </tr>
+      <tr>
+        <td>{{resultado.more_than_once}}</td>
+        <td>{{resultado.by_other}}</td>
+      </tr>
+    </table>
+  </div>
+  <br/>
+  <center>
+    <div class="container">
+      <a href="{{ url_for('index') }}"><input type="button" id="voltar" value="Voltar"></a>
+    </div>
+  </center>
+</body>
+</html>
