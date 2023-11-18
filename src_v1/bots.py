@@ -1,23 +1,20 @@
 # Faz os imports utilizados
 import os
-from dotenv import load_dotenv
 from flask import Flask, request, render_template
 import numpy as np
 import pandas as pd
 import warnings
 warnings.filterwarnings('ignore')
-
-# Importa as variáveis de ambiente
-load_dotenv()
-
-# Importa o deserializador de objetos
-import joblib
+import joblib # Importa o deserializador de objetos
 
 # Carrega a classe de predição do diretório local
 # Carregando o modelo em disco para a memória da nossa aplicação.
-modelo = joblib.load('modelo/tcc_bots_modelo_rand_forest_retro.sav')
-scaler = joblib.load('modelo/min_max_scaler.save')
+
+modelo = joblib.load('modelo/tcc_bots_modelo_gradient.sav')
+# modelo = joblib.load('modelo/tcc_bots_modelo_rand_forest_retro.sav') 
+
 scaler_v2 = joblib.load('modelo/min_max_scaler_v2.save')
+# scaler = joblib.load('modelo/min_max_scaler.save')
 
 app = Flask(__name__)
 
@@ -97,11 +94,23 @@ def normaliza_resposta(dados):
 
     retro_scaled = pd.DataFrame(df_scaled, columns=to_be_scaled.columns)
 
+    # Para o modelo de RandomForest
+    # dados_normalizados = {
+    # 'author_follower_count': retro_scaled['author_follower_count'].values[0],
+    # 'author_favourites_count': retro_scaled['author_favourites_count'].values[0],
+    # 'author_verified': dados['is_verified'],
+    # 'account_has_url': dados['has_url'],
+    # 'last_five_tweets_favs_mean': retro_scaled['last_five_tweets_favs_mean'].values[0],
+    # 'last_five_rts_favs_ratio': retro_scaled['last_five_rts_favs_ratio'].values[0],
+    # 'posted_more_than_once': dados['more_than_once'],
+    # 'posted_by_other': dados['by_other']
+    # }
+
     dados_normalizados = {
     'author_follower_count': retro_scaled['author_follower_count'].values[0],
+    'author_followings_count': retro_scaled['author_followings_count'].values[0],
     'author_favourites_count': retro_scaled['author_favourites_count'].values[0],
-    'author_verified': dados['is_verified'],
-    'account_has_url': dados['has_url'],
+    'author_statuses_count': retro_scaled['author_statuses_count'].values[0],
     'last_five_tweets_favs_mean': retro_scaled['last_five_tweets_favs_mean'].values[0],
     'last_five_rts_favs_ratio': retro_scaled['last_five_rts_favs_ratio'].values[0],
     'posted_more_than_once': dados['more_than_once'],
@@ -125,6 +134,7 @@ def verificar():
 
     # Normaliza a entrada
     dados_normalizados = normaliza_resposta(dados)
+    print(dados_normalizados)
 
     # Cria array numpy para teste
     teste = np.array([list(dados_normalizados.values())])
