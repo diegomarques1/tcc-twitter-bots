@@ -8,7 +8,7 @@ O trabalho foi produzido por:
 - Orientador: Ivan Carlos Alcântara de Oliveira
 
 ## dataset
-O diretório /dataset possui dois arquivos .xlsx, sendo eles:
+O diretório /dataset possui três arquivos .xlsx, sendo eles:
 
 ### base_adaptada.xlsx
 
