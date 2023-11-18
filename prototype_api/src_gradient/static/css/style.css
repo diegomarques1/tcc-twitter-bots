@@ -1,0 +1,189 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Variáveis */
+:root {
+  --mainColor: #1ea1f3;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+ul {
+  list-style-type: none;
+}
+
+header {
+  border-bottom: 1px solid white;
+  height: 35px;
+  width: 100%;
+  opacity: .9;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+#head {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+#head a {
+  text-decoration: none;
+}
+
+#head img {
+  height: 3.5vh;
+}
+
+header h1.logo {
+  margin: 0;
+  font-size: 1.7em;
+  color: var(--mainColor);
+  text-transform: uppercase;
+}
+
+header h1.logo:hover {
+  color: #30a7f0be;
+}
+
+.container {
+  width: 60%;
+  align-self: center;
+  justify-self: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+fieldset {
+  border-radius: 20px;
+  border: 2px solid white;
+}
+
+fieldset p {
+  margin: 0;
+  margin-top: 0.5em;
+  font-size: 1.2em;
+}
+
+fieldset input[type="number"] {
+  padding-left: 0.3em;
+  font-size: 1em;
+  width: 40%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#user_label, #username {
+  padding-left: 0.3em;
+  font-size: 1.2em;
+}
+
+li input {
+  font-size: 2em;
+}
+
+fieldset legend {
+  font-size: 1.2em;
+}
+
+#verificar, #voltar {
+  background: var(--mainColor);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 12px;
+  width: 15%;
+  align-self: center;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#voltar {
+  background-color: #009dff;
+  width: 10%;
+  align-self: center;
+  justify-self: center;
+}
+
+h2 {
+  font-size: 3em;
+  margin: 0;
+  margin-top: 40px;
+  text-align: center;
+  letter-spacing: -2px;
+}
+
+h3 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 1.7em;
+  font-weight: 100;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #ffffffe6;
+}
+
+.results {
+  width: 70%;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+table {
+  border-collapse: collapse; /* CSS2 */
+  background: black;
+  border: 2px solid white;
+  margin-bottom: 3em;
+  align-self: center;
+  width: 100%;
+}
+
+table tr, td, th {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* table th {
+  padding-left: 0.1em;
+  padding-right: 0.1em;
+} */
+
+table th, table td {
+  border: 1px solid white;
+  font-size: 1.2em;
+}
+
+table th {
+  background-color: rgb(100, 100, 100);
+}
+

@@ -8,7 +8,7 @@ warnings.filterwarnings('ignore')
 import joblib # Importa o deserializador de objetos
 
 # Carrega a classe de predição do diretório local
-# Carregando o modelo em disco para a memória da nossa aplicação.
+# Carregando o modelo em disco para a memória da nossa aplicação
 
 modelo = joblib.load('modelo/tcc_bots_modelo_gradient.sav')
 # modelo = joblib.load('modelo/tcc_bots_modelo_rand_forest_retro.sav') 
@@ -46,8 +46,8 @@ def obtem_dados_form():
 
     dados['rts_favs_ratio'] = rts_favs_ratio
 
-    dados['is_verified'] = int(request.form['is_verified'])
-    dados['has_url'] = int(request.form['has_url'])
+    # dados['is_verified'] = int(request.form['is_verified'])
+    # dados['has_url'] = int(request.form['has_url'])
     dados['more_than_once'] = int(request.form['more_than_once'])
     dados['by_other'] = int(request.form['by_other'])
 
@@ -66,8 +66,8 @@ def monta_dicionario_resposta(dados, classe, res_proba):
     resposta['favs_mean'] = dados['favs_mean']
     resposta['rts_favs_ratio'] = dados['rts_favs_ratio']
 
-    resposta['is_verified'] = 'Sim' if dados['is_verified'] == 1 else 'Não'
-    resposta['has_url'] = 'Sim' if dados['has_url'] == 1 else 'Não'
+    # resposta['is_verified'] = 'Sim' if dados['is_verified'] == 1 else 'Não'
+    # resposta['has_url'] = 'Sim' if dados['has_url'] == 1 else 'Não'
     resposta['more_than_once'] = 'Sim' if dados['more_than_once'] == 1 else 'Não'
     resposta['by_other'] = 'Sim' if dados['by_other'] == 1 else 'Não'
 
@@ -129,7 +129,7 @@ def verificar():
     print(":::::: Mostra alguns dados de teste ::::::")
     print("username: {}".format(dados["username"]))
     print("follower_count: {}".format(dados["follower_count"]))
-    print("is_verified: {}".format(dados["is_verified"]))
+    # print("is_verified: {}".format(dados["is_verified"]))
     print("by_other: {}".format(dados["by_other"]))
 
     # Normaliza a entrada

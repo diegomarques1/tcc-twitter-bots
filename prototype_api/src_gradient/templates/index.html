@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="description" content="Aplicação com o objetivo de prever se uma conta é um bot ou não no Twitter/X">
+  <title>Identificação de bot no Twitter</title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css"/>
+  <script type="text/javascript" src="../static/js/script.js"></script>
+</head>
+<body>
+  <header>
+    <div id="head">
+       <h1 class="logo">Identificação de bot no Twitter</h1>
+       <img src="../static/img/old-logo-twitter.png" alt="Logo antiga do Twitter"/>
+    </div>
+  </header>
+  <br/>
+  <!--Formulário HTML através do método POST-->
+  <div class="container">
+    <form name="form1" method="post" action="/verificar" onSubmit="return valida_dados()">
+      <center>
+        <p>
+          <label id="user_label" for="username">Username: </label>
+          <input type="text" id="username" name="username" placeholder="Digite a conta do Twitter..." required/>
+        </p>
+      </center>
+      <div>
+        <fieldset>
+          <!-- <p>
+            <label for="follower_count">Quantidade de seguidores: </label>
+            <input type="number" id="follower_count" name="follower_count" placeholder="Digite a quantidade de seguidores da conta..." required/>
+          </p>
+          <p>
+            <label for="followings_count">Quantidade de usuários que a conta segue: </label>
+            <input type="number" id="followings_count" name="followings_count" placeholder="Digite a quantidade seguida pela conta..." required/>
+          </p>
+          <p>
+            <label for="favourites_count">Quantidade de likes: </label>
+            <input type="number" id="favourites_count" name="favourites_count" placeholder="Digite a quantidade total de curtidas que a conta já deu..." required/>
+          </p>
+          <p>
+            <label for="statuses_count">Quantidade de posts: </label>
+            <input type="number" id="statuses_count" name="statuses_count" placeholder="Digite a quantidade total de tweets que a conta já fez..." required/>
+          </p>
+          <p>
+            <label for="followers_followings_ratio">Proporção de seguidores por usuários seguidos pela conta: </label>
+            <input type="number" step=any id="followers_followings_ratio" name="followers_followings_ratio" placeholder="Digite a divisão de seguidores por seguidos da conta..." required/>
+          </p> -->
+          <p>
+            <label for="rts_mean">Média de RTs nos últimos 5 posts da conta: </label>
+            <input type="number" step=any id="rts_mean" name="rts_mean" placeholder="Digite a média de RTs nos últimos 5 posts..." required/>
+          </p>
+          <p>
+            <label for="favs_mean">Média de likes nos últimos 5 posts da conta: </label>
+            <input type="number" step=any id="favs_mean" name="favs_mean" placeholder="Digite a média de curtidas nos últimos 5 posts..." required/>
+          </p>
+          <!-- <p>
+            <label for="rts_favs_ratio">Proporção de RTs por likes nos últimos 5 posts da conta: </label>
+            <input type="number" step=any id="rts_favs_ratio" name="rts_favs_ratio" placeholder="Digite a divisão entre RTs e curtidas nos últimos 5 posts..." required/>
+          </p> -->
+          <p>
+            <p>A conta é verificada? </p>
+            <ul>
+              <li><input type="radio" id="s_verified" name="is_verified" value="1"/><label for="s_verified">Sim</label></li>
+              <li><input type="radio" id="n_verified" name="is_verified" value="0" checked/><label for="n_verified">Não</label></li>
+            </ul>
+          </p>
+          <!-- <p>
+            <p>A conta tem uma URL vinculada ao seu perfil? </p>
+            <ul>
+              <li><input type="radio" id="s_url" name="has_url" value="1"/><label for="s_url">Sim</label></li>
+              <li><input type="radio" id="n_url" name="has_url" value="0" checked/><label for="n_url">Não</label></li>
+            </ul>
+          </p> -->
+          <p>
+            <p>A conta tem mais de um post com o conteúdo idêntico? </p>
+            <ul>
+              <li><input type="radio" id="s_once" name="more_than_once" value="1"/><label for="s_once">Sim</label></li>
+              <li><input type="radio" id="n_once" name="more_than_once" value="0" checked/><label for="n_once">Não</label></li>
+            </ul>
+          </p>
+          <p>
+            <p>A conta tem algum post com o conteúdo idêntico ao de outra conta? </p>
+            <ul>
+              <li><input type="radio" id="s_other" name="by_other" value="1"/><label for="s_other">Sim</label></li>
+              <li><input type="radio" id="n_other" name="by_other" value="0" checked/><label for="n_other">Não</label></li>
+            </ul>
+          </p>
+          <legend>Dados da conta</legend>
+        </fieldset>
+      </div>
+      <br/>
+      <input type="submit" id="verificar" name="verificar" value="Fazer previsão"/>
+    </form>
+  </div>
+</body>

@@ -22,8 +22,16 @@ Os 20 dados obtidos em uma pequena retroalimentação utilizando o modelo. Como 
 
 Consolidação dos dados extras da retroalimentação com o restante da base, mas apenas com os atributos obtidos nos dados extras. Possui 1020 registros, ao invés de 1040, por conta de 20 registros terem sido removidos aleatoriamente e estratificadamente para teste ao modelo final do projeto.
 
-## src_v1
-O diretório /src_v1 possui o código-fonte da aplicação Flask inicial, versão 1, desenvolvida como protótipo de aplicação analítica. Por ser um protótipo de teste do modelo, vários atributos precisam ser inseridos manualmente pelo usuário para realizar a predição da categoria de uma conta entre bot ou humano.
+## prototype
+O diretório /prototype possui o código-fonte de duas versões da aplicação Flask inicial, versão 1, desenvolvida como protótipo de aplicação analítica. Por ser um protótipo de teste do modelo, todos os atributos precisam ser inseridos manualmente pelo usuário para realizar a predição da categoria de uma conta entre bot ou humano.
+
+### src_forest
+Essa versão aplica o modelo final de RandomForest (floresta aleatória) na aplicação.
+
+### src_gradient
+Essa versão aplica o modelo final de GradientBoosting na aplicação.
+
+A estrutura geral dentro de cada versão é a seguinte:
 
 ```
 ├───modelo - contém os modelos de ML e normalizadores
@@ -35,8 +43,8 @@ O diretório /src_v1 possui o código-fonte da aplicação Flask inicial, versã
 ├───bots.py - arquivo Python com Flask para processar os dados da aplicação
 ```
 
-## src_v2
-O diretório /src_v2 possui o código-fonte da versão 2 aplicação Flask do projeto. Seu objetivo segue o mesmo, mas nela há o uso da API do Twitter por meio da biblioteca Tweepy para obter boa parte dos dados antes inseridos manualmente pelo usuário. A estrutura também segue a mesma.
+## prototype_api
+O diretório /prototype_api possui o código-fonte de duas versões da aplicação Flask do projeto, versão 2. Seu objetivo segue o mesmo, mas nela há o uso da API do Twitter por meio da biblioteca Tweepy para obter boa parte dos dados antes inseridos manualmente pelo usuário. A estrutura também segue a mesma, com divisão em ``src_forest`` e ``src_gradient``.
 
 No entanto, atualmente, para essa aplicação funcionar, é necessário ter acesso a algum plano na API do Twitter acima do gratuito. <strong>Portanto, recomendamos a utilização da versão 1 para testes, a não ser que você pague algum plano mensal da API do Twitter</strong>.
 
