@@ -53,3 +53,5 @@ Também foram utilizadas as seguintes bibliotecas: <strong>*os, dotenv, numpy, p
 Feito isso, basta estar no diretório raiz da aplicação e executar o seguinte comando:
 
 `python bots.py`
+
+Essa não é a única maneira, mas é funcional. Caso encontre algum problema, recomendamos olhar a [documentação oficial](https://flask.palletsprojects.com/en/3.0.x/quickstart/) ou o [seguinte tutorial](https://www.geeksforgeeks.org/how-to-run-a-flask-application/).
