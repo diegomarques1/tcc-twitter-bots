@@ -18,6 +18,10 @@ Uma versão adaptada da base original construída, com alguns atributos a menos,
 
 Os 20 dados obtidos em uma pequena retroalimentação utilizando o modelo. Como foram unidos com a base após tratamento de dados, seleção de atributos e afins, esses dados possuem apenas os atributos necessários para o modelo (e/ou atributos em diferentes formatos), motivo pelo qual não foram adicionados diretamente no arquivo base_adaptada.xlsx (evitar valores nulos etc.).
 
+### base_retro_adaptada.xlsx
+
+Consolidação dos dados extras da retroalimentação com o restante da base, mas apenas com os atributos obtidos nos dados extras. Possui 1020 registros, ao invés de 1040, por conta de 20 registros terem sido removidos aleatoriamente e estratificadamente para teste ao modelo final do projeto.
+
 ## src_v1
 O diretório /src_v1 possui o código-fonte da aplicação Flask inicial, versão 1, desenvolvida como protótipo de aplicação analítica. Por ser um protótipo de teste do modelo, vários atributos precisam ser inseridos manualmente pelo usuário para realizar a predição da categoria de uma conta entre bot ou humano.
 
