@@ -22,6 +22,9 @@ Os 20 dados obtidos em uma pequena retroalimentação utilizando o modelo. Como 
 
 Consolidação dos dados extras da retroalimentação com o restante da base, mas apenas com os atributos obtidos nos dados extras. Possui 1020 registros, ao invés de 1040, por conta de 20 registros terem sido removidos aleatoriamente e estratificadamente para teste ao modelo final do projeto.
 
+## notebook
+O diretório /notebook contém uma versão adaptada do processo de otimização de modelos de machine learning realizado durante o projeto. No arquivo TCC_Notebook_Adaptado.ipynb, estão contidos os resultados consolidados e adaptados. Não há garantia que esse notebook será executado com sucesso, nem que os resultados serão os mesmos (visto que é uma versão __adaptada__), mas esse artefato está aqui para dar uma ideia desse processo e servir de referência a quem interessar.
+
 ## prototype
 O diretório /prototype possui o código-fonte de duas versões da aplicação Flask inicial, versão 1, desenvolvida como protótipo de aplicação analítica. Por ser um protótipo de teste do modelo, todos os atributos precisam ser inseridos manualmente pelo usuário para realizar a predição da categoria de uma conta entre bot ou humano.
 
