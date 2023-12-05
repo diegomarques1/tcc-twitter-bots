@@ -7,6 +7,8 @@ O trabalho foi produzido por:
 - Aluno: Diego Souza Lima Marques
 - Orientador: Ivan Carlos Alcântara de Oliveira
 
+A base adaptada também pode ser encontrada no [Kaggle](https://www.kaggle.com/datasets/diegoslmarques/dataset-para-deteco-de-bots-no-twitter).
+
 ## dataset
 O diretório /dataset possui três arquivos .xlsx, sendo eles:
 
@@ -61,12 +63,27 @@ A aplicação foi construída com base nas seguintes dependências:
 * `pip 23.2.1`
 * `Flask 2.3.3`
 
-Também foram utilizadas as seguintes bibliotecas: <strong>*os, dotenv, numpy, pandas, tweepy e warnings*</strong>. Talvez seja necessário adicioná-las separadamente por meio do comando:
+Também foram utilizadas as seguintes bibliotecas: <strong>*os, numpy, pandas, tweepy, scikit-learn e warnings*</strong>. 
+Algumas versões importantes a serem utilizadas para execução do projeto sem erros:
+* `pandas: 2.1.3`
+* `numpy: 1.25.0`
+* `scikit-learn: 1.0.2`
+* `joblib: 1.3.2`
+
+Talvez seja necessário adicioná-las separadamente por meio do comando:
 
 `pip install nome-do-pacote`
+
+É recomendável instalar as mesmas versões utilizadas, incluindo do Flask, por meio do comando:
+
+`pip install nome-do-pacote==versao`
+
+Exemplo: `pip install pandas==2.1.3`
 
 Feito isso, basta estar no diretório raiz da aplicação e executar o seguinte comando:
 
 `python bots.py`
+
+Dependendo da sua versão e do seu sistema operacional, talvez você precise incluir um "3" ao final dos comandos, como: `python3 bots.py` ou `pip3 install nome-do-pacote`
 
 Essa não é a única maneira, mas é funcional. Caso encontre algum problema, recomendamos olhar a [documentação oficial](https://flask.palletsprojects.com/en/3.0.x/quickstart/) ou o [seguinte tutorial](https://www.geeksforgeeks.org/how-to-run-a-flask-application/).
